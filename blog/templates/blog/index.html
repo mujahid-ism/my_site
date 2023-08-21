@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  My Blog
+{% endblock  %}
+
+{% block css_files %}
+  <link rel="stylesheet" href= "{% static 'index.css' %}" >
+{% endblock %}
+
+{% block content %}
+  <header id="main-navigation">
+    <h1><a href="">Mujahid Blog</a></h1>
+    <nav>
+      <a href="">All Post</a>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <header>
+      <img src="{% static 'mujahid.png' %}" alt="Author of the blog" />
+      <h2>Mujahid blog</h2>
+    </header>
+    <p>Lorem Ipsum has been the industry's standard dummy text ever 
+      since the 1500s, when an unknown printer took a galley of type 
+      and scrambled it to make a type specimen book.</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>My Latest Thought</h2>
+
+    <ul>
+      <li>
+        <article class="post">
+          <a href="">
+            <img src="{% static 'mountains.jpg' %}" alt="Random Text" />
+            <div class="post__content">
+              <h3>Muountain Hiking</h3>
+              <p>
+                It has survived not only five centuries, but also the leap 
+                into electronic typesetting, remaining essentially unchanged. 
+                It was popularised in the 1960s with the release of Letraset 
+                sheets containing Lorem Ipsum passages, and more recently with 
+                desktop publishing PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>What I used to Do</h2>
+    <p>I am a Software Engineer in Selise Digital Platforms</p>
+  </section>
+{% endblock  %}
